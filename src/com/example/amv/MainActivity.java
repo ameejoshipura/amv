@@ -64,8 +64,13 @@ public class MainActivity extends ActionBarActivity {
         }
     }
     
-    public void chooseFuncCartesian(View view){
+    public void chooseOperCartesian(View view){
     	Intent intent = new Intent(this, ChooseOperationCartesian.class);
+    	startActivity(intent);
+    }
+    
+    public void chooseOperPolar(View view){
+    	Intent intent = new Intent(this, ChooseOperationPolar.class);
     	startActivity(intent);
     }
 

@@ -26,6 +26,10 @@
             android:name="com.example.amv.ChooseOperationCartesian"
             android:label="@string/title_activity_choose_operation" >
         </activity>
+        <activity
+            android:name="com.example.amv.ChooseOperationPolar"
+            android:label="@string/title_activity_choose_operation_polar" >
+        </activity>
     </application>
 
 </manifest>
