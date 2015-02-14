@@ -30,6 +30,38 @@
             android:name="com.example.amv.ChooseOperationPolar"
             android:label="@string/title_activity_choose_operation_polar" >
         </activity>
+        <activity
+            android:name="com.example.amv.Add2P"
+            android:label="@string/title_activity_add2_p" >
+        </activity>
+        <activity
+            android:name="com.example.amv.Add2C"
+            android:label="@string/title_activity_add2_c" >
+        </activity>
+        <activity
+            android:name="com.example.amv.Add3P"
+            android:label="@string/title_activity_add3_p" >
+        </activity>
+        <activity
+            android:name="com.example.amv.Add3C"
+            android:label="@string/title_activity_add3_c" >
+        </activity>
+        <activity
+            android:name="com.example.amv.ScalarProductP"
+            android:label="@string/title_activity_scalar_product_p" >
+        </activity>
+        <activity
+            android:name="com.example.amv.ScalarProductC"
+            android:label="@string/title_activity_scalar_product_c" >
+        </activity>
+        <activity
+            android:name="com.example.amv.VectorProductC"
+            android:label="@string/title_activity_vector_product_c" >
+        </activity>
+        <activity
+            android:name="com.example.amv.VectorProductP"
+            android:label="@string/title_activity_vector_product_p" >
+        </activity>
     </application>
 
 </manifest>

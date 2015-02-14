@@ -3,6 +3,7 @@ package com.example.amv;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -60,5 +61,25 @@ public class ChooseOperationCartesian extends ActionBarActivity {
 			return rootView;
 		}
 	}
+	
+	public void Add2C(View view){
+    	Intent intent = new Intent(this, Add2C.class);
+    	startActivity(intent);
+    }
+
+	public void Add3C(View view){
+    	Intent intent = new Intent(this, Add3C.class);
+    	startActivity(intent);
+    }
+	
+	public void ScalarProductC(View view){
+    	Intent intent = new Intent(this, ScalarProductC.class);
+    	startActivity(intent);
+    }
+	
+	public void VectorProductC(View view){
+    	Intent intent = new Intent(this, VectorProductC.class);
+    	startActivity(intent);
+    }
 
 }

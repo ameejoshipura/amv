@@ -3,6 +3,7 @@ package com.example.amv;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -60,5 +61,24 @@ public class ChooseOperationPolar extends ActionBarActivity {
 			return rootView;
 		}
 	}
+	
+	public void Add2P(View view){
+    	Intent intent = new Intent(this, Add2P.class);
+    	startActivity(intent);
+    }
 
+	public void Add3P(View view){
+    	Intent intent = new Intent(this, Add3P.class);
+    	startActivity(intent);
+    }
+	
+	public void ScalarProductP(View view){
+    	Intent intent = new Intent(this, ScalarProductP.class);
+    	startActivity(intent);
+    }
+	
+	public void VectorProductP(View view){
+    	Intent intent = new Intent(this, VectorProductP.class);
+    	startActivity(intent);
+    }
 }
