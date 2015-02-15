@@ -8,7 +8,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.amv.Add3C$PlaceholderFragment" >
 
-   <TextView
+    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,5 +17,166 @@
         android:layout_marginTop="20sp"
         android:text="Add 3 Vectors"
         android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="34dp"
+        android:layout_toLeftOf="@+id/button1"
+        android:text="V1"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/V1"
+        android:layout_alignBottom="@+id/V1"
+        android:layout_centerHorizontal="true"
+        android:text="V2"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/V3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/V2"
+        android:layout_alignBottom="@+id/V2"
+        android:layout_marginLeft="26dp"
+        android:layout_toRightOf="@+id/button1"
+        android:text="V3"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/X1Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/V1"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/V1"
+        android:text="X1"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/X1Input"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/X1Title"
+        android:layout_alignBottom="@+id/X1Title"
+        android:layout_alignLeft="@+id/V1"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/X2Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/X1Input"
+        android:layout_alignBottom="@+id/X1Input"
+        android:layout_toLeftOf="@+id/V2"
+        android:text="X2"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/X2Input"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/X2Title"
+        android:layout_alignBottom="@+id/X2Title"
+        android:layout_alignLeft="@+id/V2"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/X3Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/X2Input"
+        android:layout_alignBottom="@+id/X2Input"
+        android:layout_toRightOf="@+id/button1"
+        android:text="X3"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/X3Input"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/X3Title"
+        android:layout_alignBottom="@+id/X3Title"
+        android:layout_alignLeft="@+id/V3"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Y2Title"
+        android:layout_below="@+id/Y2Input"
+        android:layout_marginTop="43dp"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/Y1Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/X1Input"
+        android:layout_marginTop="56dp"
+        android:layout_toLeftOf="@+id/Y1Input"
+        android:text="Y1"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/Y1Input"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Y1Title"
+        android:layout_alignBottom="@+id/Y1Title"
+        android:layout_alignLeft="@+id/X1Input"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/Y2Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Y1Input"
+        android:layout_alignBottom="@+id/Y1Input"
+        android:layout_toLeftOf="@+id/Y2Input"
+        android:text="Y2"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/Y2Input"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Y2Title"
+        android:layout_alignBottom="@+id/Y2Title"
+        android:layout_alignLeft="@+id/X2Input"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/Y3Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Y2Input"
+        android:layout_alignBottom="@+id/Y2Input"
+        android:layout_toLeftOf="@+id/Y3Input"
+        android:text="Y3"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/Y3Input"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Y3Title"
+        android:layout_alignBottom="@+id/Y3Title"
+        android:layout_alignLeft="@+id/X3Input"
+        android:ems="10"
+        android:inputType="numberDecimal" />
 
 </RelativeLayout>
