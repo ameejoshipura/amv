@@ -8,7 +8,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.amv.Add3P$PlaceholderFragment" >
 
-  <TextView
+ <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,5 +17,176 @@
         android:layout_marginTop="20sp"
         android:text="Add 3 Vectors"
         android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/V1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="34dp"
+        android:layout_toLeftOf="@+id/button1"
+        android:text="V1"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/V2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/V1"
+        android:layout_alignBottom="@+id/V1"
+        android:layout_centerHorizontal="true"
+        android:text="V2"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/V3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/V2"
+        android:layout_alignBottom="@+id/V2"
+        android:layout_marginLeft="26dp"
+        android:layout_toRightOf="@+id/button1"
+        android:text="V3"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/R1Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/V1"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/V1"
+        android:text="R1"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/R1Input"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/R1Title"
+        android:layout_alignBottom="@+id/R1Title"
+        android:layout_alignLeft="@+id/V1"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/R2Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/R1Input"
+        android:layout_alignBottom="@+id/R1Input"
+        android:layout_toLeftOf="@+id/V2"
+        android:text="R2"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/R2Input"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/R2Title"
+        android:layout_alignBottom="@+id/R2Title"
+        android:layout_alignLeft="@+id/V2"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/R3Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/R2Input"
+        android:layout_alignBottom="@+id/R2Input"
+        android:layout_toRightOf="@+id/button1"
+        android:text="R3"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/R3Input"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/R3Title"
+        android:layout_alignBottom="@+id/R3Title"
+        android:layout_alignLeft="@+id/V3"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/T1Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/R1Input"
+        android:layout_marginTop="56dp"
+        android:layout_toLeftOf="@+id/T1Input"
+        android:text="T1"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/T1Input"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/T1Title"
+        android:layout_alignBottom="@+id/T1Title"
+        android:layout_alignLeft="@+id/R1Input"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/T2Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/T1Input"
+        android:layout_alignBottom="@+id/T1Input"
+        android:layout_toLeftOf="@+id/T2Input"
+        android:text="T2"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/T2Input"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/T2Title"
+        android:layout_alignBottom="@+id/T2Title"
+        android:layout_alignLeft="@+id/R2Input"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/T3Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/T2Input"
+        android:layout_alignBottom="@+id/T2Input"
+        android:layout_toLeftOf="@+id/T3Input"
+        android:text="T3"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/T3Input"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/T3Title"
+        android:layout_alignBottom="@+id/T3Title"
+        android:layout_alignLeft="@+id/R3Input"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/T3Input"
+        android:layout_below="@+id/T1Input"
+        android:layout_marginTop="19dp"
+        android:text="R=radius, T=angle with X-axis"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/T2Title"
+        android:layout_below="@+id/TextView01"
+        android:layout_marginTop="18dp"
+        android:text="Calculate" />
 
 </RelativeLayout>
