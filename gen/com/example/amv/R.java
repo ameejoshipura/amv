@@ -1145,22 +1145,24 @@ containing a value of this type.
         public static final int activity_choose_operation=0x7f03001b;
         public static final int activity_choose_operation_polar=0x7f03001c;
         public static final int activity_main=0x7f03001d;
-        public static final int activity_scalar_product_c=0x7f03001e;
-        public static final int activity_scalar_product_p=0x7f03001f;
-        public static final int activity_vector_product_c=0x7f030020;
-        public static final int activity_vector_product_p=0x7f030021;
-        public static final int fragment_add2=0x7f030022;
-        public static final int fragment_add2_c=0x7f030023;
-        public static final int fragment_add3=0x7f030024;
-        public static final int fragment_add3_c=0x7f030025;
-        public static final int fragment_choose_operation=0x7f030026;
-        public static final int fragment_choose_operation_polar=0x7f030027;
-        public static final int fragment_main=0x7f030028;
-        public static final int fragment_scalar_product=0x7f030029;
-        public static final int fragment_scalar_product_c=0x7f03002a;
-        public static final int fragment_vector_product=0x7f03002b;
-        public static final int fragment_vector_product_c=0x7f03002c;
-        public static final int support_simple_spinner_dropdown_item=0x7f03002d;
+        public static final int activity_results=0x7f03001e;
+        public static final int activity_scalar_product_c=0x7f03001f;
+        public static final int activity_scalar_product_p=0x7f030020;
+        public static final int activity_vector_product_c=0x7f030021;
+        public static final int activity_vector_product_p=0x7f030022;
+        public static final int fragment_add2=0x7f030023;
+        public static final int fragment_add2_c=0x7f030024;
+        public static final int fragment_add3=0x7f030025;
+        public static final int fragment_add3_c=0x7f030026;
+        public static final int fragment_choose_operation=0x7f030027;
+        public static final int fragment_choose_operation_polar=0x7f030028;
+        public static final int fragment_main=0x7f030029;
+        public static final int fragment_results=0x7f03002a;
+        public static final int fragment_scalar_product=0x7f03002b;
+        public static final int fragment_scalar_product_c=0x7f03002c;
+        public static final int fragment_vector_product=0x7f03002d;
+        public static final int fragment_vector_product_c=0x7f03002e;
+        public static final int support_simple_spinner_dropdown_item=0x7f03002f;
     }
     public static final class menu {
         public static final int add2=0x7f0c0000;
@@ -1170,10 +1172,11 @@ containing a value of this type.
         public static final int choose_operation=0x7f0c0004;
         public static final int choose_operation_polar=0x7f0c0005;
         public static final int main=0x7f0c0006;
-        public static final int scalar_product=0x7f0c0007;
-        public static final int scalar_product_c=0x7f0c0008;
-        public static final int vector_product=0x7f0c0009;
-        public static final int vector_product_c=0x7f0c000a;
+        public static final int results=0x7f0c0007;
+        public static final int scalar_product=0x7f0c0008;
+        public static final int scalar_product_c=0x7f0c0009;
+        public static final int vector_product=0x7f0c000a;
+        public static final int vector_product_c=0x7f0c000b;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1227,6 +1230,7 @@ containing a value of this type.
         public static final int title_activity_add3_p=0x7f0a0016;
         public static final int title_activity_choose_operation=0x7f0a0012;
         public static final int title_activity_choose_operation_polar=0x7f0a0013;
+        public static final int title_activity_results=0x7f0a001c;
         public static final int title_activity_scalar_product_c=0x7f0a0019;
         public static final int title_activity_scalar_product_p=0x7f0a0018;
         public static final int title_activity_vector_product_c=0x7f0a001a;

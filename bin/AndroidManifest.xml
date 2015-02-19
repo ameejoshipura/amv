@@ -62,6 +62,10 @@
             android:name="com.example.amv.VectorProductP"
             android:label="@string/title_activity_vector_product_p" >
         </activity>
+        <activity
+            android:name="com.example.amv.Results"
+            android:label="@string/title_activity_results" >
+        </activity>
     </application>
 
 </manifest>

@@ -56,7 +56,8 @@
         android:layout_below="@+id/Y2Input"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
-        android:text="Calculate" />
+        android:text="Calculate"
+        android:onClick="display2Cresult" />
 
     <TextView
         android:id="@+id/TextView01"
