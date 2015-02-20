@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">AMV</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="polar">Polar</string>
+    <string name="cartesian">Cartesian</string>
+    <string name="title_activity_choose_operation_cartesian">Cartesian</string>
+    <string name="title_activity_choose_operation_polar">Polar</string>
+    <string name="title_activity_add_two_vectors">Add two vectors</string>
+    <string name="title_activity_add_three_vectors">Add three vectors</string>
+    <string name="title_activity_scalar_product">Scalar product</string>
+    <string name="title_activity_vector_product">Vector product</string>
+    <string name="title_activity_add_two_vectors_polar">Add two vectors</string>
+    <string name="title_activity_add_three_vectors_polar">Add three vectors</string>
+    <string name="title_activity_scalar_product_polar">Scalar product</string>
+    <string name="title_activity_vector_product_polar">Vector product</string>
+    <string name="title_activity_result_scalar_product">Result</string>
+    <string name="title_activity_result_vector_product">Result</string>
+    <string name="title_activity_result_two_vectors">Result</string>
+    <string name="title_activity_result_three_vectors">Result</string>
+    <string name="title_activity_polar">Result</string>
+    <string name="noresult">No result to display</string>
+</resources>
