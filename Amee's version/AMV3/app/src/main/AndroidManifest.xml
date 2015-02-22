@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.amv" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".chooseOperationCartesian"
+            android:label="@string/title_activity_choose_operation_cartesian" >
+        </activity>
+        <activity
+            android:name=".chooseOperationPolar"
+            android:label="@string/title_activity_choose_operation_polar" >
+        </activity>
+        <activity
+            android:name=".addTwoVectors"
+            android:label="@string/title_activity_add_two_vectors" >
+        </activity>
+        <activity
+            android:name=".addThreeVectors"
+            android:label="@string/title_activity_add_three_vectors" >
+        </activity>
+        <activity
+            android:name=".scalarProduct"
+            android:label="@string/title_activity_scalar_product" >
+        </activity>
+        <activity
+            android:name=".vectorProduct"
+            android:label="@string/title_activity_vector_product" >
+        </activity>
+        <activity
+            android:name=".addTwoVectorsPolar"
+            android:label="@string/title_activity_add_two_vectors_polar" >
+        </activity>
+        <activity
+            android:name=".addThreeVectorsPolar"
+            android:label="@string/title_activity_add_three_vectors_polar" >
+        </activity>
+        <activity
+            android:name=".scalarProductPolar"
+            android:label="@string/title_activity_scalar_product_polar" >
+        </activity>
+        <activity
+            android:name=".vectorProductPolar"
+            android:label="@string/title_activity_vector_product_polar" >
+        </activity>
+        <activity
+            android:name=".resultScalarProduct"
+            android:label="@string/title_activity_result_scalar_product" >
+        </activity>
+        <activity
+            android:name=".resultVectorProduct"
+            android:label="@string/title_activity_result_vector_product" >
+        </activity>
+        <activity
+            android:name=".resultTwoVectors"
+            android:label="@string/title_activity_result_two_vectors" >
+        </activity>
+        <activity
+            android:name=".resultThreeVectors"
+            android:label="@string/title_activity_result_three_vectors" >
+        </activity>
+        <activity
+            android:name=".polar"
+            android:label="@string/title_activity_polar" >
+        </activity>
+    </application>
+
+</manifest>

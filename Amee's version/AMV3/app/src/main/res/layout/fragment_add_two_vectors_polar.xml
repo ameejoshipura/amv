@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.amv.addTwoVectorsPolar$PlaceholderFragment">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:text="Add 2 Vectors"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/Theta1Input"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Theta1Title"
+        android:layout_alignBottom="@+id/Theta1Title"
+        android:layout_alignLeft="@+id/R1Input"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:layout_marginTop="46dp"
+        android:onClick="addTVCPolar"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="V1"
+        android:textSize="30sp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/TextView02" />
+
+    <TextView
+        android:id="@+id/Theta1Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Theta1"
+        android:textSize="20sp"
+        android:layout_below="@+id/R1Input"
+        android:layout_toStartOf="@+id/Theta1Input" />
+
+    <TextView
+        android:id="@+id/Theta2Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Theta2"
+        android:textSize="20sp"
+        android:layout_below="@+id/R2Input"
+        android:layout_toStartOf="@+id/R1Input" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="V2"
+        android:textSize="30sp"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/R2Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R2"
+        android:textSize="20sp"
+        android:layout_above="@+id/Theta2Input"
+        android:layout_alignEnd="@+id/Theta2Title" />
+
+    <TextView
+        android:id="@+id/R1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R1"
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/TextView01"
+        android:layout_toStartOf="@+id/Theta1Input" />
+
+    <EditText
+        android:id="@+id/R1Input"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_alignTop="@+id/R1"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/R2Input"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Theta1Input"
+        android:layout_alignTop="@+id/TextView02"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/Theta2Input"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Theta2Title"
+        android:layout_alignBottom="@+id/Theta2Title"
+        android:layout_alignLeft="@+id/R2Input"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R=radius, T=angle with X-axis"
+        android:textSize="20sp"
+        android:layout_below="@+id/Theta2Input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40sp"/>
+</RelativeLayout>
