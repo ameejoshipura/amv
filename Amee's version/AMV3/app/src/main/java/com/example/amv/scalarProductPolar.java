@@ -75,10 +75,10 @@ public class scalarProductPolar extends ActionBarActivity {
         EditText editR2 = (EditText)findViewById(R.id.R2Input);
         double r2 = Double.parseDouble(editR2.getText().toString());
 
-        EditText editT1 = (EditText)findViewById(R.id.T1Input);
+        EditText editT1 = (EditText)findViewById(R.id.Theta1Input);
         double t1 = Double.parseDouble(editT1.getText().toString());
 
-        EditText editT2 = (EditText)findViewById(R.id.T2Input);
+        EditText editT2 = (EditText)findViewById(R.id.Theta2Input);
         double t2 = Double.parseDouble(editT2.getText().toString());
 
         double r = r1*r2*Math.cos(t1-t2);

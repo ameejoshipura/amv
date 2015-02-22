@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.os.Build;
 import android.widget.EditText;
 
+import util.Calculator;
+
 
 public class vectorProductPolar extends ActionBarActivity {
 
@@ -69,27 +71,31 @@ public class vectorProductPolar extends ActionBarActivity {
     public void vectorPolar(View view){
         Intent intent = new Intent(this, polar.class);
 
-        EditText editR1 = (EditText)findViewById(R.id.R1Input);
-        double r1 = Double.parseDouble(editR1.getText().toString());
 
-        EditText editR2 = (EditText)findViewById(R.id.R2Input);
-        double r2 = Double.parseDouble(editR2.getText().toString());
+        EditText editText = (EditText)findViewById(R.id.R1Input);
+        double r1 = Double.parseDouble(editText.getText().toString());
 
-        EditText editT1 = (EditText)findViewById(R.id.T1Input);
-        double t1 = Double.parseDouble(editT1.getText().toString());
+        editText = (EditText)findViewById(R.id.R2Input);
+        double r2 = Double.parseDouble(editText.getText().toString());
 
-        EditText editT2 = (EditText)findViewById(R.id.T2Input);
-        double t2 = Double.parseDouble(editT2.getText().toString());
+        editText = (EditText)findViewById(R.id.Theta1Input);
+        double t1 = Double.parseDouble(editText.getText().toString());
 
-        double x1 = r1*Math.cos(t1);
-        double y1 = r1*Math.sin(t1);
+        editText = (EditText)findViewById(R.id.Theta2Input);
+        double t2 = Double.parseDouble(editText.getText().toString());
 
-        double x2 = r2*Math.cos(t2);
-        double y2 = r2*Math.sin(t2);
+        String ans ="";
 
-        double r = (x1*y2)-(x2*y1);
+        try {
+            double[] v1 = Calculator.polarToCartesian(r1, t1);
+            double[] v2 = Calculator.polarToCartesian(r2, t2);
 
-        String ans = "The result is= \n R: " + r + ", theta: 0.0";
+            double r = Calculator.vectorProduct(v1[0], v1[1], v2[0], v2[1]);
+
+            ans = "The result is= \n R: " + r + ",\n theta: 0.0";
+        } catch(Exception e){
+            ans = e.getLocalizedMessage();
+        }
         intent.putExtra("Result", ans);
 
         startActivity(intent);

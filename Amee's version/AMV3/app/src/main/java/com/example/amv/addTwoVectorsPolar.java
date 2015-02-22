@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.os.Build;
 import android.widget.EditText;
 
+import util.Calculator;
+
 
 public class addTwoVectorsPolar extends ActionBarActivity {
 
@@ -69,31 +71,31 @@ public class addTwoVectorsPolar extends ActionBarActivity {
     public void addTVCPolar(View view){
         Intent intent = new Intent(this, polar.class);
 
-        EditText editR1 = (EditText)findViewById(R.id.R1Input);
-        double r1 = Double.parseDouble(editR1.getText().toString());
+        EditText editText = (EditText)findViewById(R.id.R1Input);
+        double r1 = Double.parseDouble(editText.getText().toString());
 
-        EditText editR2 = (EditText)findViewById(R.id.R2Input);
-        double r2 = Double.parseDouble(editR2.getText().toString());
+        editText = (EditText)findViewById(R.id.R2Input);
+        double r2 = Double.parseDouble(editText.getText().toString());
 
-        EditText editT1 = (EditText)findViewById(R.id.T1Input);
-        double t1 = Double.parseDouble(editT1.getText().toString());
+        editText = (EditText)findViewById(R.id.Theta1Input);
+        double t1 = Double.parseDouble(editText.getText().toString());
 
-        EditText editT2 = (EditText)findViewById(R.id.T2Input);
-        double t2 = Double.parseDouble(editT2.getText().toString());
+        editText = (EditText)findViewById(R.id.Theta2Input);
+        double t2 = Double.parseDouble(editText.getText().toString());
 
-        double x1 = r1*Math.cos(t1);
-        double y1 = r1*Math.sin(t1);
+        String ans="";
 
-        double x2 = r2*Math.cos(t2);
-        double y2 = r2*Math.sin(t2);
+        try {
+            double[] v1 = Calculator.polarToCartesian(r1, t1);
+            double[] v2 = Calculator.polarToCartesian(r2, t2);
 
-        double xr = x1+x2;
-        double yr = y1+y2;
+            double[] result = Calculator.add2Vectors(v1[0], v1[1], v2[0], v2[1]);
+            double[] resPolar = Calculator.cartesianToPolar(result[0], result[1]);
 
-        double r = Math.sqrt((xr*xr)+(yr*yr));
-        double t = Math.atan(yr/xr);
-
-        String ans = "The result is= \n R: " + r + ", theta: " + t;
+            ans = "The result is= \n R: " + resPolar[0] + ",\n theta: " + resPolar[1];
+        } catch(Exception e){
+            ans = e.getLocalizedMessage();
+        }
         intent.putExtra("Result", ans);
 
         startActivity(intent);

@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 import android.widget.EditText;
+import util.Calculator;
 
 
 public class addTwoVectors extends ActionBarActivity {
@@ -69,22 +70,26 @@ public class addTwoVectors extends ActionBarActivity {
     public void addTVC(View view){
         Intent intent = new Intent(this, resultTwoVectors.class);
 
-        EditText editX1 = (EditText)findViewById(R.id.X1Input);
-        double x1 = Double.parseDouble(editX1.getText().toString());
+        EditText editText = (EditText)findViewById(R.id.X1Input);
+        double x1 = Double.parseDouble(editText.getText().toString());
 
-        EditText editX2 = (EditText)findViewById(R.id.X2Input);
-        double x2 = Double.parseDouble(editX2.getText().toString());
+        editText = (EditText)findViewById(R.id.X2Input);
+        double x2 = Double.parseDouble(editText.getText().toString());
 
-        EditText editY1 = (EditText)findViewById(R.id.Y1Input);
-        double y1 = Double.parseDouble(editY1.getText().toString());
+        editText = (EditText)findViewById(R.id.Y1Input);
+        double y1 = Double.parseDouble(editText.getText().toString());
 
-        EditText editY2 = (EditText)findViewById(R.id.Y2Input);
-        double y2 = Double.parseDouble(editY2.getText().toString());
+        editText = (EditText)findViewById(R.id.Y2Input);
+        double y2 = Double.parseDouble(editText.getText().toString());
 
-        double xr = x1 + x2;
-        double yr = y1 + y2;
+        String ans = "";
+        try {
+            double[] result = Calculator.add2Vectors(x1, y1, x2, y2);
 
-        String ans = "The result is= \n X: " + xr + ", Y: " + yr;
+            ans = "The result is= \n X: " + result[0] + ", Y: " + result[1];
+        } catch(Exception e){
+            ans = e.getLocalizedMessage();
+        }
         intent.putExtra("Result", ans);
 
         startActivity(intent);

@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.os.Build;
 import android.widget.EditText;
 
+import util.Calculator;
+
 
 public class scalarProduct extends ActionBarActivity {
 
@@ -69,21 +71,26 @@ public class scalarProduct extends ActionBarActivity {
     public void scalar(View view){
         Intent intent = new Intent(this, resultScalarProduct.class);
 
-        EditText editX1 = (EditText)findViewById(R.id.X1Input);
-        double x1 = Double.parseDouble(editX1.getText().toString());
+        EditText editText = (EditText)findViewById(R.id.X1Input);
+        double x1 = Double.parseDouble(editText.getText().toString());
 
-        EditText editX2 = (EditText)findViewById(R.id.X2Input);
-        double x2 = Double.parseDouble(editX2.getText().toString());
+        editText = (EditText)findViewById(R.id.X2Input);
+        double x2 = Double.parseDouble(editText.getText().toString());
 
-        EditText editY1 = (EditText)findViewById(R.id.Y1Input);
-        double y1 = Double.parseDouble(editY1.getText().toString());
+        editText = (EditText)findViewById(R.id.Y1Input);
+        double y1 = Double.parseDouble(editText.getText().toString());
 
-        EditText editY2 = (EditText)findViewById(R.id.Y2Input);
-        double y2 = Double.parseDouble(editY2.getText().toString());
+        editText = (EditText)findViewById(R.id.Y2Input);
+        double y2 = Double.parseDouble(editText.getText().toString());
 
-        double result = (x1*x2)+(y1*y2);
+        String ans ="";
+        try {
+            double result = Calculator.scalarProduct(x1, y1, x2, y2);
 
-        String ans = "The result is= \n " + result;
+            ans = "The result is= \n " + result;
+        } catch(Exception e){
+            ans = e.getLocalizedMessage();
+        }
         intent.putExtra("Result", ans);
 
         startActivity(intent);
