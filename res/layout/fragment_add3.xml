@@ -187,6 +187,7 @@
         android:layout_alignLeft="@+id/T2Title"
         android:layout_below="@+id/TextView01"
         android:layout_marginTop="18dp"
+        android:onClick="display3Presult"
         android:text="Calculate" />
 
 </RelativeLayout>

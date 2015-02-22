@@ -65,18 +65,26 @@ public class Add2C extends ActionBarActivity {
 	}
 	
 	public void display2Cresult(View view) throws Exception{
-		Intent intent = new Intent(this, Results.class);
+		Intent intent = new Intent(this, ResultsAdd2C.class);
 		
-		EditText editTextX1 = (EditText)findViewById(R.id.X1Input);
-		String x1string = editTextX1.toString();
-		//int x1 = Integer.parseInt(x1string);
-		/*int x2 = R.id.X2Input;
-		int y1 = R.id.Y1Input;
-		int y2 = R.id.Y2Input;*/
 		
-		//double result[] = Calculator.add2vectors(x1, y1, x2, y2);
-		String resultVector = x1string;
-		intent.putExtra("",resultVector);
+	    EditText editX1 = (EditText)findViewById(R.id.X1Input);
+        double x1 = Double.parseDouble(editX1.getText().toString());
+        
+        EditText editX2 = (EditText)findViewById(R.id.X2Input);
+        double x2 = Double.parseDouble(editX2.getText().toString());
+
+        EditText editY1 = (EditText)findViewById(R.id.Y1Input);
+        double y1 = Double.parseDouble(editY1.getText().toString());
+
+        EditText editY2 = (EditText)findViewById(R.id.Y2Input);
+        double y2 = Double.parseDouble(editY2.getText().toString());
+		
+		double result[] = Calculator.add2vectors(x1, y1, x2, y2);
+       
+		
+		String ans = "The result is= \n X: " + result[0] + ", Y: " + result[1];
+		intent.putExtra("Result",ans);
 		startActivity(intent);
 	}
 

@@ -53,21 +53,36 @@ public class Calculator {
 		return result;
 	}
 	
-	public static double[] add3vectors(double x1, double y1, double x2, double y2, double x3, double y3)
+	public static double[] add3vectors(double x1, double y1, double x2, double y2, double x3, double y3) throws Exception
 	{
+		if (Math.abs(x1)>=10000 || Math.abs(y1)>=10000 || Math.abs(x2)>=10000 || Math.abs(y2)>=10000 || Math.abs(x3)>=10000 || Math.abs(y3)>=10000)
+		{
+			throw new Exception("Inputs too large!");
+		}
+		
 		double[] result=new double[2];
 		result[0]=x1+x2+x3;
 		result[1]=y1+y2+y3;
 		return result;
 	}
 	
-	public static double scalarProduct(double x1, double y1, double x2, double y2)
+	public static double scalarProduct(double x1, double y1, double x2, double y2) throws Exception
 	{
+		if (Math.abs(x1)>=10000 || Math.abs(y1)>=10000 || Math.abs(x2)>=10000 || Math.abs(y2)>=10000)
+		{
+			throw new Exception("Inputs too large!");
+		}
+		
 		return x1*x2+y1*y2;
 	}
 	
-	public static double vectorProduct(double x1, double x2, double y1, double y2)
+	public static double vectorProduct(double x1, double x2, double y1, double y2) throws Exception
 	{
+		if (Math.abs(x1)>=10000 || Math.abs(y1)>=10000 || Math.abs(x2)>=10000 || Math.abs(y2)>=10000)
+		{
+			throw new Exception("Inputs too large!");
+		}
+		
 		return x1*y2-y1*x2; //this is just the value of the z component! so answer will be (0,0,z)!
 	}
 	

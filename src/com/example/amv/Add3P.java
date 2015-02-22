@@ -1,14 +1,17 @@
 package com.example.amv;
 
+import util.Calculator;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.os.Build;
 
 public class Add3P extends ActionBarActivity {
@@ -60,5 +63,37 @@ public class Add3P extends ActionBarActivity {
 			return rootView;
 		}
 	}
+	
+	public void display3Presult(View view) throws Exception{
+        Intent intent = new Intent(this, ResultsAddPolar.class);
 
+        EditText editR1 = (EditText)findViewById(R.id.R1Input);
+        double r1 = Double.parseDouble(editR1.getText().toString());
+
+        EditText editR2 = (EditText)findViewById(R.id.R2Input);
+        double r2 = Double.parseDouble(editR2.getText().toString());
+
+        EditText editR3 = (EditText)findViewById(R.id.R3Input);
+        double r3 = Double.parseDouble(editR2.getText().toString());
+        
+        EditText editT1 = (EditText)findViewById(R.id.T1Input);
+        double t1 = Double.parseDouble(editT1.getText().toString());
+
+        EditText editT2 = (EditText)findViewById(R.id.T2Input);
+        double t2 = Double.parseDouble(editT2.getText().toString());
+
+        EditText editT3 = (EditText)findViewById(R.id.T3Input);
+        double t3 = Double.parseDouble(editT2.getText().toString());
+        
+        double vector1c[]=Calculator.polarToCartesian(r1, t1);
+        double vector2c[]=Calculator.polarToCartesian(r2, t2);
+        double vector3c[]=Calculator.polarToCartesian(r3, t3);
+        
+        double result[] = Calculator.add3vectors(vector1c[0],vector1c[1],vector2c[0],vector2c[1],vector3c[0],vector3c[1]);
+
+        String ans = "The result is= \n R: " + result[0] + ", theta: " + result[1];
+        intent.putExtra("Result", ans);
+
+        startActivity(intent);
+	}
 }

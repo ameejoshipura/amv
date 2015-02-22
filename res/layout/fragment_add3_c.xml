@@ -117,7 +117,8 @@
         android:layout_alignLeft="@+id/Y2Title"
         android:layout_below="@+id/Y2Input"
         android:layout_marginTop="43dp"
-        android:text="Calculate" />
+        android:text="Calculate"
+        android:onClick="display3Cresult" />
 
     <TextView
         android:id="@+id/Y1Title"

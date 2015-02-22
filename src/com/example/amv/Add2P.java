@@ -3,12 +3,14 @@ package com.example.amv;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.os.Build;
 
 public class Add2P extends ActionBarActivity {
@@ -60,5 +62,38 @@ public class Add2P extends ActionBarActivity {
 			return rootView;
 		}
 	}
+	
+	public void display2Presult(View view){
+        Intent intent = new Intent(this, ResultsAddPolar.class);
+
+        EditText editR1 = (EditText)findViewById(R.id.R1Input);
+        double r1 = Double.parseDouble(editR1.getText().toString());
+
+        EditText editR2 = (EditText)findViewById(R.id.R2Input);
+        double r2 = Double.parseDouble(editR2.getText().toString());
+
+        EditText editT1 = (EditText)findViewById(R.id.Theta1Input);
+        double t1 = Double.parseDouble(editT1.getText().toString());
+
+        EditText editT2 = (EditText)findViewById(R.id.Theta2Input);
+        double t2 = Double.parseDouble(editT2.getText().toString());
+
+        double x1 = r1*Math.cos(t1);
+        double y1 = r1*Math.sin(t1);
+
+        double x2 = r2*Math.cos(t2);
+        double y2 = r2*Math.sin(t2);
+
+        double xr = x1+x2;
+        double yr = y1+y2;
+
+        double r = Math.sqrt((xr*xr)+(yr*yr));
+        double t = Math.atan(yr/xr);
+
+        String ans = "The result is= \n R: " + r + ", theta: " + t;
+        intent.putExtra("Result", ans);
+
+        startActivity(intent);
+    }
 
 }

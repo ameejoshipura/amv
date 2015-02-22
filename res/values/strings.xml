@@ -16,6 +16,9 @@
     <string name="title_activity_scalar_product_c">Scalar Product in Cartesian</string>
     <string name="title_activity_vector_product_c">Vector Product in Cartesian</string>
     <string name="title_activity_vector_product_p">Vector Product in Polar</string>
-    <string name="title_activity_results">Results</string>
+    <string name="title_activity_resultsadd2c">Results</string>
+    <string name="title_activity_result_add3_c">ResultAdd3C</string>
+    <string name="title_activity_result_vector_product">ResultVectorProduct</string>
+    <string name="title_activity_results_add_polar">ResultsAddPolar</string>
 
 </resources>

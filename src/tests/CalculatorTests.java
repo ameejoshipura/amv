@@ -157,18 +157,66 @@ public class CalculatorTests{
 	}
 	
 	@Test 
-	public void scalarProduct_regular_input()
+	public void add3vectors_regular_input() throws Exception
+	{
+		double[] result=Calculator.add3vectors(3,4,5,6,7,8);
+		Assert.assertTrue(result[0]==15 && result[1]==18);
+	}
+	
+	@Test 
+	public void add3vectors_inputs_too_large() throws Exception
+	{
+		boolean thrown = false;
+		double[] result={-1,-1};
+		try {
+		    result = Calculator.add3vectors(10000,-10000,10000,-10000,10000,-10000);
+		  } catch (Exception e) {
+		    thrown = true;
+		  }
+		
+		  Assert.assertTrue(thrown);
+	}
+	
+	@Test 
+	public void scalarProduct_regular_input() throws Exception
 	{
 		double result=Calculator.scalarProduct(3,4,5,6);
 		Assert.assertTrue(result == 3*5+4*6);
 	}
 	
 	@Test 
-	public void vectorProduct_regular_input()
+	public void scalarProduct_inputs_too_large() throws Exception
+	{
+		boolean thrown = false;
+		double result=-1;
+		try {
+		    result = Calculator.scalarProduct(10000,-10000,10000,-10000);
+		  } catch (Exception e) {
+		    thrown = true;
+		  }
+		
+		  Assert.assertTrue(thrown);
+	}
+	
+	@Test 
+	public void vectorProduct_regular_input() throws Exception
 	{
 		double result=Calculator.vectorProduct(3,4,5,6);
 		Assert.assertTrue(result == 3*6-4*5);
 	}
 	
+	@Test 
+	public void vectorProduct_inputs_too_large() throws Exception
+	{
+		boolean thrown = false;
+		double result=-1;
+		try {
+		    result = Calculator.vectorProduct(10000,-10000,10000,-10000);
+		  } catch (Exception e) {
+		    thrown = true;
+		  }
+		
+		  Assert.assertTrue(thrown);
+	}
 	
 }

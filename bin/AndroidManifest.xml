@@ -63,8 +63,20 @@
             android:label="@string/title_activity_vector_product_p" >
         </activity>
         <activity
-            android:name="com.example.amv.Results"
-            android:label="@string/title_activity_results" >
+            android:name="com.example.amv.ResultsAdd2C"
+            android:label="@string/title_activity_resultsadd2c" >
+        </activity>
+        <activity
+            android:name="com.example.amv.ResultAdd3C"
+            android:label="@string/title_activity_result_add3_c" >
+        </activity>
+        <activity
+            android:name="com.example.amv.ResultVectorProduct"
+            android:label="@string/title_activity_result_vector_product" >
+        </activity>
+        <activity
+            android:name="com.example.amv.ResultsAddPolar"
+            android:label="@string/title_activity_results_add_polar" >
         </activity>
     </application>
 
